@@ -1,0 +1,155 @@
+/*
+  Created by Jacob Hrbek <kreyren@rixotstudio.cz> under GPLv3 license <https://www.gnu.org/licenses/gpl-3.0.en.html> in 11/04/2020
+  
+  How-to-use:
+  - This is designed to be used with an Automail extension <https://addons.mozilla.org/lv/firefox/addon/aniscripts/> also available as tampermonkey script
+  - You need to remove all comments for the website to recognize the syntax as of 11/04/2020
+  - To install place the Code in https://anilist.co/settings/apps at the bottom of the page
+  - For background i am using `linear-gradient(rgba(123, 0, 193, 0.5), rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed`
+*/
+
+/* Font color */
+.time[data-v-6994d971],
+.stat .label[data-v-815ccddc],
+.nav .link[data-v-66e5278e],
+.el-dropdown-menu,
+el-dropdown-menu__item, body, h1, h2, h3, p {
+	color: rgb(255, 219, 0);
+}
+
+/* navbar */
+.nav-wrap[data-v-66e5278e] {
+	background-color: rgb(177, 17, 210);
+	margin-bottom: 23px;
+	margin-top: -27px;
+	z-index: 3;
+	position: relative;
+}
+
+/* Text in navbar */
+.nav .link {
+	display: inline-block;
+	margin: 0px 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-size: 125%;
+}
+
+.overview[data-v-2cf72664] .content-wrap {
+	background: #a300ff;
+	border-radius: 4px;
+	font-size: 1.4rem;
+	margin-bottom: 25px;
+	padding: 20px;
+}
+
+.text[data-v-6994d971] {
+	padding: 20px;
+	background-color: #7e00a2;
+}
+
+/* history lv1 day */
+.history-day.lv-1[data-v-514856af], .tooltip .circle.lv-1[data-v-514856af] {
+	background: rgba(253, 255,0,0.7);
+}
+
+.list.small[data-v-6994d971] {
+	font-size: 1.4rem;
+	grid-template-columns: 50px auto;
+	height: 100%;
+	min-height: 70px;
+	background-color: #BC3DD9;
+}
+
+.avatar[data-v-66e5278e] {
+	border-radius: 100%;
+	display: inline-block;
+	max-height: 230px;
+	max-width: 160px;
+	width: 100%;
+}
+
+.activity-manga_list > div > div > div > div > .title {
+	color: rgb(255, 195, 0);
+}
+
+.avatar[data-v-66e5278e] {
+	transition: transform .2s;
+}
+
+.avatar[data-v-66e5278e] {
+	border-radius: 100%;
+	display: inline-block;
+	max-height: 230px;
+	max-width: 160px;
+	width: 100%;
+	margin-bottom: 73px;
+	margin-left: 39%;
+}
+
+.name[data-v-66e5278e] {
+	color: rgb(var(--color-text-bright));
+	display: inline-block;
+	font-weight: 800;
+	padding: 22px 25px;
+	font-size: 50px;
+}
+
+.load-more[data-v-6f203cf2] {
+	background: #830F9D;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-top: 20px;
+	padding: 14px;
+	text-align: center;
+	transition: .2s;
+}
+
+body {
+	background-color: #000;
+}
+
+.list .title[data-v-6994d971] {
+	color: #FFE700;
+	font-weight: bold;
+}
+
+.banner[data-v-66e5278e] {
+	background-color: #272c38;
+	background-position: 50% 35%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 330px;
+	position: relative;
+	opacity: 0.9;
+}
+
+.nav[data-v-66e5278e] {
+	font-size: 96%;
+	max-width: 1220px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.reply[data-v-0bf5aadf] {
+	background: #440157;
+	border-radius: 3px;
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+	padding: 14px;
+	padding-bottom: 14px;
+	padding-bottom: 4px;
+	position: relative;
+}
+
+.markdown img {
+	border-radius: 3px;
+	max-height: 800px;
+	max-width: 100%;
+	opacity: 0.4;
+}
