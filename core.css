@@ -153,3 +153,14 @@ body {
 	max-width: 100%;
 	opacity: 0.4;
 }
+
+/* Styling for Quotes on profile */
+.markdown blockquote {
+    background: #000;
+    border-left: solid 7px #FF0;
+    border-radius: 3px;
+    display: inline-block;
+    font-style: italic;
+    margin-left: 10px;
+    padding: 10px 14px;
+}
