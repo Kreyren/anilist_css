@@ -45,6 +45,14 @@ el-dropdown-menu__item, body, h1, h2, h3, p {
 	padding: 20px;
 }
 
+/* Used for 'Activity' and other texts */
+.overview[data-v-2cf72664] .section-header {
+    margin-bottom: 10px;
+    padding-left: 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
 .text[data-v-6994d971] {
 	padding: 20px;
 	background-color: #7e00a2;
