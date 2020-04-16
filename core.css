@@ -251,3 +251,8 @@ body {
 }
 
 
+/* Customization for links */
+.markdown a, .markdown a:visited {
+    color: #00EBFF;
+    font-weight: bold;
+}
