@@ -183,3 +183,71 @@ body {
     color: #09FFD8;
     font-weight: bold;
 }
+
+.milestones[data-v-815ccddc] {
+    display: grid;
+    font-size: 1.1rem;
+    font-weight: 500;
+    grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
+    padding: 11px 0;
+    background-color: #47096A;
+}
+
+/* Failed experiment with animating the background (Does not allow us to remove the original banner) */
+.banner[data-v-66e5278e] {
+    height: 330px;
+    position: relative;
+    animation: gradient 10s cubic-bezier(.77,0,.18,1) infinite;
+    background: linear-gradient(-89deg, #040404, #000000e0, #000);
+    background-size: auto;
+    background-size: 400% 400%;
+    z-index: 0;
+}
+
+/* Definition for animation */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Customization of Stats (above activity) */
+.progress[data-v-815ccddc] {
+    background: rgb(var(--color-foreground-grey-dark));
+    height: 11px;
+    padding: 0 16.5%;
+    background-color: #5b1984;
+}
+
+.user-page-unscoped.purple .progress .bar {
+    background: linear-gradient(270deg,#ff0083,#fff300);
+    border-radius: 0px;
+}
+
+.stat .value[data-v-815ccddc] {
+    color: #FF0;
+    font-size: 28px;
+    font-weight: bolt;
+    padding-bottom: 8px;
+}
+
+.stat .label[data-v-815ccddc] {
+    color: color: #FF0;
+    font-size: 13px;
+}
+
+.progress .bar[data-v-815ccddc] {
+    box-sizing: content-box;
+    height: 100%;
+    margin-left: -33.3%;
+    padding-right: 33.3%;
+}
+
+
