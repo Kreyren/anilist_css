@@ -1,14 +1,12 @@
+@-moz-document url("https://anilist.co/home"), url("https://anilist.co/user/kreyren/"), url("https://anilist.co/notifications"), regexp("https://anilist.co/activity/.*") {
 /*
   Created by Jacob Hrbek <kreyren@rixotstudio.cz> under GPLv3 license <https://www.gnu.org/licenses/gpl-3.0.en.html> in 11/04/2020
   
   How-to-use:
-  - This is designed to be used with an Automail extension <https://addons.mozilla.org/lv/firefox/addon/aniscripts/> also available as tampermonkey script
-  - You need to remove all comments for the website to recognize the syntax as of 11/04/2020
+  - This is designed to be used with an Automail extension <https://addons.mozilla.org/lv/firefox/addon/aniscripts/> also available as tampermonkey script or Stylus <https://addons.mozilla.org/en-US/firefox/addon/styl-us/>
   - To install place the Code in https://anilist.co/settings/apps at the bottom of the page
-  - For background i am using `linear-gradient(rgba(123, 0, 193, 0.5), rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed`
 */
 
-@-moz-document url("https://anilist.co/home"), url("https://anilist.co/user/kreyren/"), url("https://anilist.co/notifications"), regexp("https://anilist.co/activity/.*") {
 /* Colors */
 :root {
     --kpxc-background-color: #3b3b3d;
@@ -248,5 +246,195 @@ h2 {
 .list .title[data-v-568e7548] {
     color: #FF0;
     font-weight: bold;
+}
+}
+
+@-moz-document url("https://anilist.co/user/KaizokuOtaku") {
+/*
+  Created by Jacob Hrbek <kreyren@rixotstudio.cz> under GPLv3 license <https://www.gnu.org/licenses/gpl-3.0.en.html> in 11/04/2020
+
+    Created so that i don't have to look at the ugliness of Kaizok's profile
+  
+  How-to-use:
+  - This is designed to be used with an Automail extension <https://addons.mozilla.org/lv/firefox/addon/aniscripts/> also available as tampermonkey script or Stylus <https://addons.mozilla.org/en-US/firefox/addon/styl-us/>
+  - To install place the Code in https://anilist.co/settings/apps at the bottom of the page
+*/
+
+
+/* Colors */
+:root {
+    --kpxc-background-color: #3b3b3d;
+    --kpxc-card-background-color: #2b2a2a;
+    --kpxc-card-border-color: #292a2a;
+    --kpxc-card-header-color: #27272a;
+    --kpxc-container-border: 1px solid #000;
+    --kpxc-input-active-border-color: #2b4d1a;
+    --kpxc-input-background-color: #27272a;
+    --kpxc-input-border: 1px solid #2b4d1a;
+    --kpxc-input-border-color: #292a2a;
+    --kpxc-input-main-border-color: #3b3d3c;
+    --kpxc-link-color: #6cac4d;
+    --kpxc-link-hover-color: #429f14;
+    --kpxc-table-border-color: #a0a0a0;
+    --kpxc-table-hover-color: #474948;
+    --kpxc-table-odd-color: #3b3d3c;
+    --kpxc-text-color: #cbcfcb;
+    --color-foreground: 255, 30, 0, .75;
+    --color-foreground-faded: 132, 30, 18;
+    --color-foreground-faded-more: 104, 23, 13;
+    --color-foreground-grey: 245,246,246;
+    --color-foreground-grey-dark: 234,236,237;
+    --color-foreground-blue: 174,71,247;
+    --color-foreground-blue-dark: 241,243,247;
+    --color-background: 255, 0, 79;
+    --color-background-blue-dark: 31,35,45;
+    --color-overlay: 31,38,49;
+    --color-shadow: 49,54,68;
+    --color-shadow-dark: 6,13,34;
+    --color-shadow-blue: 103,132,187;
+    --color-text: 255, 255, 255;
+    --color-text-light: 249, 220, 2;
+    --color-text-lighter: 183,175,27;
+    --color-text-bright: 237,241,245;
+    --color-blue: 255, 255, 255;
+    --color-blue-dim: 141,178,219;
+    --color-white: 255,255,255;
+    --color-black: 0,0,0;
+    --color-red: 232,93,117;
+    --color-peach: 250,122,122;
+    --color-orange: 247,154,99;
+    --color-yellow: 247,191,99;
+    --color-green: 123,213,85;
+    --color-background-100: 251,251,251;
+    --color-background-200: 237,241,245;
+    --color-background-300: 221,230,238;
+    --color-background-400: 201,215,227;
+    --color-background-500: 173,192,210;
+    --color-background-600: 139,160,178;
+    --color-background-700: 116,136,153;
+    --color-background-800: 100,115,128;
+    --color-background-900: 81,97,112;
+    --color-background-1000: 64,78,92;
+    --color-background-1100: 38,52,63;
+    --color-background-1200: 27,30,31;
+    --color-gray-100: 251,251,251;
+    --color-gray-200: 237,241,245;
+    --color-gray-300: 221,230,238;
+    --color-gray-400: 201,215,227;
+    --color-gray-500: 173,192,210;
+    --color-gray-600: 139,160,178;
+    --color-gray-700: 116,136,153;
+    --color-gray-800: 100,115,128;
+    --color-gray-900: 81,97,112;
+    --color-gray-1000: 64,78,92;
+    --color-gray-1100: 38,52,63;
+    --color-gray-1200: 27,30,31;
+    --color-blue-100: 247,250,252;
+    --color-blue-200: 236,246,254;
+    --color-blue-300: 201,232,255;
+    --color-blue-400: 143,215,255;
+    --color-blue-500: 111,200,255;
+    --color-blue-600: 61,180,242;
+    --color-blue-700: 8,143,214;
+    --color-blue-800: 12,101,166;
+    --color-blue-900: 11,70,113;
+    --color-blue-1000: 16,61,85;
+    --color-green-100: 245,249,243;
+    --color-green-200: 226,246,217;
+    --color-green-300: 160,241,126;
+    --color-green-400: 119,220,76;
+    --color-green-500: 83,175,45;
+    --color-green-600: 56,126,26;
+    --color-green-700: 46,90,27;
+    --color-green-800: 41,66,31;
+    --color-red-100: 255,244,246;
+    --color-red-200: 254,212,220;
+    --color-red-300: 255,140,160;
+    --color-red-400: 236,41,75;
+    --color-red-500: 213,0,37;
+    --color-red-600: 165,1,29;
+    --color-red-700: 117,0,20;
+}
+
+/* Navbar */
+/** Ancored selection **/
+.nav .router-link-active[data-v-5445dac8] {
+    color: #FFF;
+    font-size: 150%;
+    font-weight: bold;
+}
+/** UnAncored options **/
+.nav .link[data-v-5445dac8] {
+    color: #FFF;
+    font-size: 125%;
+}
+
+/* Posts */
+/** User names **/
+.name[data-v-568e7548] {
+    color: #FFF;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+/* History */
+.history-day.lv-1[data-v-514856af], .tooltip .circle.lv-1[data-v-514856af] {
+    background: #bf0a0a;
+}
+.history-day.lv-2[data-v-514856af], .tooltip .circle.lv-1[data-v-514856af] {
+    background: #ff8606;
+}
+.history-day.lv-3[data-v-514856af], .tooltip .circle.lv-3[data-v-514856af] {
+    background: #fd0;
+}
+.history-day.lv-3[data-v-514856af], .tooltip .circle.lv-3[data-v-514856af] {
+    background: #eeea0f;
+}
+.history-day.lv-5[data-v-514856af], .tooltip .circle.lv-3[data-v-514856af] {
+    background: #FFF;
+}
+
+/* Genre Overview */
+/** Labels **/
+.label[data-v-aedb6876] {
+    color: #FFF;
+    font-size: 100%;
+}
+/** Make numbers bolt **/
+.genre[data-v-aedb6876] {
+    font-weight: bold;
+}
+
+
+/* Milestones */
+/** Milestone numbers **/
+.stat .value[data-v-815ccddc] {
+    color: #FFF;
+    font-size: 133%;
+    font-weight: bold;
+}
+/** Lower bar on milestones **/
+.footer[data-v-815ccddc] {
+    background: rgb(var(--color-foreground-faded));
+}
+/** Progress bar **/
+.user-page-unscoped.red .progress .bar {
+    background: linear-gradient(270deg,#e89e09,#f78c9b);
+}
+/** Progress bar - background **/
+.progress[data-v-815ccddc] {
+    background: rgb(var(--color-foreground-faded-more));
+}
+
+/* Profile name in banner */
+.name[data-v-5445dac8] {
+    font-size: 250%;
+}
+
+/* H2 */
+h2 {
+    font-size: 125%;
+    font-weight: 500;
+    color: #FFF;
 }
 }
