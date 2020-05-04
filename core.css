@@ -256,3 +256,34 @@ body {
     color: #00EBFF;
     font-weight: bold;
 }
+
+/* 30th April 2020 site update */
+
+/* Genre overview */
+.label[data-v-aedb6876] {
+    color: #FF0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Posts */
+.text[data-v-568e7548] {
+    padding: 20px;
+    background-color: #5B098A;
+}
+
+/* Small posts */
+.list.small .details[data-v-568e7548] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    min-height: 70px;
+    background-color: #3B0659;
+}
+
+/* Navbar */
+.nav-wrap[data-v-5445dac8] {
+    background: #3B0659;
+    width: 100%;
+}
