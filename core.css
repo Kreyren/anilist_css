@@ -8,7 +8,7 @@
   - For background i am using `linear-gradient(rgba(123, 0, 193, 0.5), rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed`
 */
 
-@-moz-document url("https://anilist.co/home"), url("https://anilist.co/user/kreyren/"), regexp("https://anilist.co/activity/.*") {
+@-moz-document url("https://anilist.co/home"), url("https://anilist.co/user/kreyren/"), url("https://anilist.co/notifications"), regexp("https://anilist.co/activity/.*") {
 /* Colors */
 :root {
     --kpxc-background-color: #3b3b3d;
@@ -27,10 +27,10 @@
     --kpxc-table-hover-color: #474948;
     --kpxc-table-odd-color: #3b3d3c;
     --kpxc-text-color: #cbcfcb;
-    --color-foreground: 138,9,186;
+    --color-foreground: 44,41,86;
     --color-foreground-grey: 245,246,246;
     --color-foreground-grey-dark: 234,236,237;
-    --color-foreground-blue: 174,71,247;
+    --color-foreground-blue: rgb(174,71,247);
     --color-foreground-blue-dark: 241,243,247;
     --color-background: 74, 8, 104;
     --color-background-blue-dark: 31,35,45;
@@ -38,7 +38,7 @@
     --color-shadow: 49,54,68;
     --color-shadow-dark: 6,13,34;
     --color-shadow-blue: 103,132,187;
-    --color-text: 247,247,12;
+    --color-text: 177, 173, 236;
     --color-text-light: 249, 220, 2;
     --color-text-lighter: 183,175,27;
     --color-text-bright: 237,241,245;
@@ -110,8 +110,10 @@
 
 /* Body */
 body {
-    background: linear-gradient(rgba(51, 5, 77, .87), rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed;
+    background: linear-gradient(#100f20f5, rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed;
     color: rgb(var(--color-text));
+    /* animation: bcAnim .2s infinite; */
+    /* animation-timing-function: cubic-bezier(.49,.54,.75,.51); */
     font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     font-size: 1.6rem;
     height: 100%;
@@ -125,6 +127,11 @@ body {
     margin-top: 28px !important;
 }
 
+
+@keyframes bcAnim {
+    0% { background: linear-gradient(#100f20de rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed; }
+    100% { background: linear-gradient(#100f20f7 rgb(0,0,0.8)), url(https://linx.li/s/ph6s6jti.png) center/133% fixed; }
+}
 }
 
 @-moz-document url("https://anilist.co/home"), url("https://anilist.co/user/kreyren/"), regexp("https://anilist.co/activity/.*") {
@@ -132,14 +139,9 @@ body {
 
 /* Name in posts */
 .text .name[data-v-568e7548] {
-    display: inline-block;
-    color: #FF0;
-    height: 40px;
-    line-height: 40px;
-    margin-left: 12px;
-    vertical-align: top;
+    color: #FFB700;
     font-weight: bold;
-    font-size: 200%;
+    font-size: 150%;
 }
 
 /* H2 */
@@ -167,12 +169,8 @@ h2 {
 
 /* Feed buttons */
 .feed-type-toggle > div[data-v-7b8d25f2] {
-    display: inline-block;
-    font-size: 1.2rem;
-    padding: 6px 0;
-    text-align: center;
-    transition: .2s;
-    width: 72px;
+    background: #655EBF;
+    color: #F0F0ED;
     font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 }
 }
@@ -181,17 +179,17 @@ h2 {
 /* Navbar ancored selection */
 .nav .router-link-active[data-v-5445dac8] {
     color: #E7FF00;
+    font-size: 125%;
+}
+
+/* Navbar non-ancored */
+.nav .link[data-v-5445dac8] {
+    font-size: 125%;
 }
 
 /* Milestones */
 .milestones[data-v-815ccddc] {
-    display: grid;
-    font-size: 1.1rem;
-    font-weight: 500;
-    grid-template-columns: repeat(3,1fr);
-    overflow: hidden;
-    padding: 11px 0;
-    background-color: #4F026C;
+    background-color: #1C1A37;
 }
 
 .stat .value[data-v-815ccddc] {
@@ -213,7 +211,7 @@ h2 {
     padding-right: 33.3%;
 }
 .progress[data-v-815ccddc] {
-    background: #2D023E;
+    background: #16142D;
     height: 11px;
     padding: 0 16.5%;
 }
@@ -245,7 +243,7 @@ h2 {
     color: #FF0;
     font-weight: bold;
 }
-  
+
 /* Hyperlinks in small posts */
 .list .title[data-v-568e7548] {
     color: #FF0;
