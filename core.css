@@ -235,6 +235,10 @@ h2 {
 .name[data-v-5445dac8] {
     margin-bottom: -28px;   
 }
+/** Make it bigger **/
+.name[data-v-5445dac8] {
+    font-size: 300%;
+}
 
 /* Clickable things */
 .markdown a, .markdown a:visited {
